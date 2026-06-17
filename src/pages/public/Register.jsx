@@ -50,11 +50,11 @@ export default function Register() {
                     { value: 'company', label: 'Empresa', icon: 'business' },
                   ].map(opt => (
                     <button key={opt.value} type="button" onClick={() => setForm({ ...form, role: opt.value })}
-                      className={`p-4 rounded-2xl border-2 text-center transition-all ${
+                      className={`p-3 sm:p-4 rounded-2xl border-2 text-center transition-all min-w-0 ${
                         form.role === opt.value ? 'border-secondary bg-secondary/5' : 'border-outline-variant bg-transparent'
                       }`}>
-                      <span className="material-symbols-outlined text-2xl block mb-1 text-secondary">{opt.icon}</span>
-                      <span className="text-xs font-bold">{opt.label}</span>
+                      <span className="material-symbols-outlined text-xl sm:text-2xl block mb-1 text-secondary">{opt.icon}</span>
+                      <span className="text-[10px] sm:text-xs font-bold">{opt.label}</span>
                     </button>
                   ))}
                 </div>
